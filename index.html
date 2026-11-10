@@ -7,7 +7,6 @@
     <meta name="description" content="Get Locked in At The Wolfs Den. Your station for high-fidelity shooter gameplay, open-world testing, and clean studio audio. Dropping into Arc Raiders, warming up with GTA 5, and diving into day-one GTA 6 chaos. Fully loaded, locked, and live. Grab a seat.">
     <meta name="keywords" content="The Wolfs Den, locsnloaded, locsnloadedhq, Arc Raiders stream, GTA 6 day one, GTA 5 gameplay, PC gaming hardware optimization, XSplit streaming setup, custom stream tutorials, late night radio vibe, RTX 4060 Ti, Ryzen 5 7600X, PS5 Pro gameplay, shooter gameplay">
     
-    <!-- Google Fonts for Late-Night Radio / Gaming Vibe -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Orbitron:wght@500;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
@@ -49,7 +48,6 @@
             gap: 2rem;
         }
 
-        /* Header / Brand Block */
         header {
             text-align: center;
             background: var(--panel-color);
@@ -79,10 +77,9 @@
             letter-spacing: 1px;
         }
 
-        /* Video Container Section */
         .video-wrapper {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             background: #000;
@@ -91,7 +88,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        /* Note: Swap out this placeholder iframe src with your actual native YouTube/Twitch live embed link code */
+        /* Fixed Youtube Live Embed string configuration */
         .video-wrapper iframe {
             position: absolute;
             top: 0;
@@ -101,7 +98,6 @@
             border: 0;
         }
 
-        /* Station Broadcast Information & Outposts Row */
         .grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -110,7 +106,7 @@
 
         @media (min-width: 768px) {
             .grid {
-                grid-template-columns: 1.5fr 1fr;
+                grid-template-columns: 1.3fr 1fr;
             }
         }
 
@@ -136,10 +132,9 @@
             margin-bottom: 1rem;
         }
 
-        /* Structured Outpost Links */
-        .links-list {
-            display: flex;
-            flex-direction: column;
+        .links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
 
@@ -150,11 +145,12 @@
             background: #1f1f23;
             color: var(--text-main);
             text-decoration: none;
-            padding: 1rem;
+            padding: 1.2rem 0.5rem;
             border-radius: 8px;
             font-weight: 700;
             text-transform: uppercase;
             font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
             letter-spacing: 1px;
             border: 1px solid #3a3a3c;
             transition: all 0.3s ease;
@@ -180,40 +176,37 @@
 
     <div class="container">
         
-        <!-- Header Section -->
         <header>
             <h1>The Wolfs Den <span>HQ</span></h1>
             <p class="tagline">Late Night Radio // High-Fidelity Gameplay // Live Optimization</p>
         </header>
 
-        <!-- Live Stream Embed Section -->
         <main class="video-wrapper">
-            <!-- Replace 'YOUR_CHANNEL_ID_HERE' with your actual YouTube live string or target stream embed block -->
+            <!-- Fixed Live Embed Query Structure. Replace YOUR_CHANNEL_HANDLE with your exact handle name -->
             <iframe 
                 src="https://youtube.com" 
-                title="The Wolfs Den Live Stream Feed"
+                title="The Wolfs Den Live Broadcast Feed"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
             </iframe>
         </main>
 
-        <!-- Informational Routing Architecture Grid -->
         <section class="grid">
             
-            <!-- Broadcaster Information Panel -->
             <article class="panel">
                 <h2>Transmission Log</h2>
-                <p>Get locked in. Broadcasting directly from the studio core layout running a customized hardware rig built specifically for raw processing and zero-compromise video capture flow.</p>
-                <p>Deploying systematic execution into the drops of <strong>Arc Raiders</strong>, keeping the gears loose inside open-world tactical sectors, and securing immediate day-one execution protocols across major territory updates.</p>
+                <p>Get locked in. Broadcasting directly from the studio core layout running a customized <strong>Ryzen 5 7600X</strong> and <strong>RTX 4060 Ti</strong> desktop rig built for pure processing and zero-compromise video capture flow.</p>
+                <p>Deploying systematic execution into the high-stakes sectors of <strong>Arc Raiders</strong>, alongside day-one launch deployments for <strong>Grand Theft Auto 6</strong> straight from the <strong>PS5 Pro</strong> hardware configuration.</p>
+                <p>No shortcuts, no backup teams. Running a dedicated 2-hour casual challenge script with zero stars and strict boundaries. Grab a seat, monitor the dials, and observe the output sequence.</p>
             </article>
 
-            <!-- Channel Outposts Routing Hub -->
             <nav class="panel">
                 <h2>Signal Outposts</h2>
-                <div class="links-list">
-                    <a href="#" class="stream-btn" target="_blank" rel="noopener">YouTube Main Channel</a>
-                    <a href="#" class="stream-btn" target="_blank" rel="noopener">Listen To The Podcast</a>
-                    <a href="#" class="stream-btn" target="_blank" rel="noopener">Handcrafted Laser Art Shop</a>
+                <div class="links-grid">
+                    <a href="https://www.youtube.com/@LocsNLoadedHQ" class="stream-btn" target="_blank" rel="noopener">YouTube</a>
+                    <a href="https://twitch.tv" class="stream-btn" target="_blank" rel="noopener">Twitch</a>
+                    <a href="https://www.twitch.tv/locsnloadedhq" class="stream-btn" target="_blank" rel="noopener">X / Twitter</a>
+                    <a href="https://www.tiktok.com/@locsnloadedhq" class="stream-btn" target="_blank" rel="noopener">TikTok</a>
                 </div>
             </nav>
 
