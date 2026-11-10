@@ -44,7 +44,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 960px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -82,30 +82,12 @@ h1 {
     display: inline-block;
 }
 
-/* =============================================
-   DUAL STREAM MEDIA HUB
-   ============================================= */
-.media-hub-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    width: 100%;
-}
-
-@media (min-width: 992px) {
-    .media-hub-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 .video-section {
     background: var(--panel-color);
     padding: 1rem;
     border-radius: 12px;
     border: 2px solid #27272a;
     box-shadow: 0 10px 30px rgba(0,0,0,.5);
-    display: flex;
-    flex-direction: column;
 }
 
 .video-status {
@@ -148,7 +130,6 @@ h1 {
     overflow: hidden;
     background: #000;
     border-radius: 8px;
-    flex-grow: 1;
 }
 
 .video-wrapper iframe {
@@ -159,9 +140,6 @@ h1 {
     border: 0;
 }
 
-/* =============================================
-   LOWER PAGE PANELS
-   ============================================= */
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -233,6 +211,7 @@ footer {
     color: var(--text-muted);
     font-size: 1rem;
 }
+
 </style>
 </head>
 
@@ -249,71 +228,71 @@ footer {
     </p>
 </header>
 
-<!-- Dual Outpost Layout Grid -->
-<div class="media-hub-grid">
+<main class="video-section">
 
-    <!-- YouTube Feed Block -->
-    <main class="video-section">
-        <div class="video-status">
-            <span class="status-dot offline" id="statusDot"></span>
-            <span id="videoStatus">CONNECTING TO THE HQ...</span>
-        </div>
-        <div class="video-wrapper">
-            <iframe
-                id="youtubePlayer"
-                title="The Wolfs Den - YouTube Feed"
-                src=""
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </main>
+    <div class="video-status">
+        <span class="status-dot offline" id="statusDot"></span>
+        <span id="videoStatus">CONNECTING TO THE HQ...</span>
+    </div>
 
-    <!-- Twitch Feed Block -->
-    <main class="video-section">
-        <div class="video-status">
-            <span class="status-dot live"></span>
-            <span>TWITCH BROADCAST CORRIDOR</span>
-        </div>
-        <div class="video-wrapper">
-            <iframe
-                id="twitchPlayer"
-                title="The Wolfs Den - Twitch Feed"
-                src="https://twitch.tv"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </main>
+    <div class="video-wrapper">
 
-</div>
+        <iframe
+            id="youtubePlayer"
+            title="The Wolfs Den - LocsNLoaded HQ"
+            src=""
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</main>
 
 <section class="grid">
 
 <article class="panel">
+
 <h2>Transmission Log</h2>
+
 <p>
 Get Locked In The Wolfs Den. Broadcasting directly from the studio core layout running a customized
 <strong>Ryzen 5 7600X</strong> and
 <strong>RTX 4060 Ti</strong> desktop rig built for pure processing and zero-compromise video capture flow.
 </p>
+
 <p>
 Deploying systematic execution into the high-stakes sectors of
 <strong>Arc Raiders</strong>, alongside
 <strong>Grand Theft Auto</strong> gameplay and day-one GTA 6 action.
 </p>
+
 <p>
 No shortcuts, no backup teams. Grab a seat, monitor the dials, and observe the output sequence.
 </p>
+
 </article>
 
 <nav class="panel">
+
 <h2>Signal Outposts</h2>
+
 <div class="links-grid">
-<a href="https://www.youtube.com/channel/UC_11k9ce95q66gak-UHMr2Q" class="stream-btn" target="_blank" rel="noopener">YouTube</a>
-<a href="https://www.twitch.tv/locsnloadedhq" class="stream-btn" target="_blank" rel="noopener">Twitch</a>
-<a href="https://x.com/LocsNLoadedHQ" class="stream-btn" target="_blank" rel="noopener">X / Twitter</a>
-<a href="https://www.tiktok.com/@locsnloadedhq" class="stream-btn" target="_blank" rel="noopener">TikTok</a>
+
+<a href="https://www.youtube.com/@LocsNLoadedHQ"
+class="stream-btn" target="_blank" rel="noopener">YouTube</a>
+
+<a href="https://www.twitch.tv/locsnloadedhq"
+class="stream-btn" target="_blank" rel="noopener">Twitch</a>
+
+<a href="https://x.com/LocsNLoadedHQ"
+class="stream-btn" target="_blank" rel="noopener">X / Twitter</a>
+
+<a href="https://www.tiktok.com/@locsnloadedhq"
+class="stream-btn" target="_blank" rel="noopener">TikTok</a>
+
 </div>
+
 </nav>
 
 </section>
@@ -323,59 +302,39 @@ No shortcuts, no backup teams. Grab a seat, monitor the dials, and observe the o
 <p>&copy; 2026 LocsNLoaded HQ // All Signals Active.</p>
 </footer>
 
+
 <script>
+
 // =============================================
 // THE WOLFS DEN - LOCS N LOADED HQ
 // AUTOMATIC LIVE + OFFLINE VIDEO ROTATION
 // =============================================
 
+
+// 1. INSERT YOUR NEW RESTRICTED API KEY
+
 const API_KEY = "AIzaSyDbL2rShlFLsixY-LRwQHO9MSI9GJxAJ-o";
+
+
+// 2. YOUR YOUTUBE CHANNEL ID
+
 const CHANNEL_ID = "UC_11k9ce95q66gak-UHMr2Q";
+
+
+// 3. YOUR UPLOADS PLAYLIST ID
+
 const UPLOADS_PLAYLIST = "UU_11k9ce95q66gak-UHMr2Q";
+
+
+// 4. CHECK FREQUENCY
+
+// Search.list costs 100 quota units per request.
+// A 15-minute interval keeps daily checks within
+// Google's standard 10,000-unit daily quota,
+// assuming no other API usage.
+
 const CHECK_INTERVAL = 15 * 60 * 1000;
 
-const player = document.getElementById("youtubePlayer");
-const statusText = document.getElementById("videoStatus");
-const statusDot = document.getElementById("statusDot");
-
-let currentMode = "";
-
-function playOfflinePlaylist() {
-    if (currentMode === "offline") return;
-    currentMode = "offline";
-    statusText.textContent = "OFFLINE MODE - PLAYING LOCS N LOADED VIDEOS";
-    statusDot.className = "status-dot offline";
-    player.src = "https://youtube.com" + encodeURIComponent(UPLOADS_PLAYLIST) + "&autoplay=1&mute=1&loop=1&playsinline=1";
-}
-
-function checkLiveStatus() {
-    const url = `https://googleapis.com{CHANNEL_ID}&type=video&eventType=live&key=${API_KEY}`;
-    fetch(url)
-        .then(response => {
-            if (!response.ok) throw new Error("API network failure response.");
-            return response.json();
-        })
-        .then(data => {
-            if (data.items && data.items.length > 0) {
-                const videoId = data.items[0].id.videoId;
-                if (currentMode === "live" && player.src.includes(videoId)) return;
-                currentMode = "live";
-                statusText.textContent = "🔴 THE WOLFS DEN IS LIVE";
-                statusDot.className = "status-dot live";
-                player.src = `https://youtube.com{videoId}?autoplay=1&mute=0&playsinline=1`;
-            } else {
-                playOfflinePlaylist();
-            }
-        })
-        .catch(err => {
-            console.error("WOLFS DEN CONNECTION ERROR:", err);
-            playOfflinePlaylist();
-        });
-}
-
-// Initial cycle execution and persistent loop setup
-checkLiveStatus();
-setInterval(checkLiveStatus, CHECK_INTERVAL);
 
 const player = document.getElementById("youtubePlayer");
 const statusText = document.getElementById("videoStatus");
